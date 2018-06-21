@@ -1,0 +1,30 @@
+{
+    "member" : [
+      {
+        "id" : 1,
+        "firstName" : "Juan",
+        "surname" : "Mendoza",
+        "location" : "London N11",
+        "pricePerHour" : 8,
+        "age" : 57,
+        "yearsOfExperience" : 4,
+        "photo" : "#",
+        "bookmarked" : true,
+        "title" : "This is juan titles",
+        "description" : "juan more text in here that is a little long text why not"
+      },
+      {
+        "id" : 2,
+        "firstName" : "Juantik",
+        "surname" : "Asimov",
+        "location" : "Londonish N22",
+        "pricePerHour" : 9,
+        "age" : 52,
+        "yearsOfExperience" : 1,
+        "photo" : "#",
+        "bookmarked" : true,
+        "title" : "Seconding titling saucing",
+        "description" : "Prrraau, baby like wooohhhoooo, trippy tripppyyyy here imagine a long text"
+      }
+    ]
+  }

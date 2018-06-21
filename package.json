@@ -4,12 +4,16 @@
   "description": "Boilerplate for webpack 4",
   "main": "index.js",
   "scripts": {
+    "mockServer": "node json-server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --mode development --hot --open --port 3000 --history-api-fallback",
+    "startWithServer": "concurrently 'npm run mockServer' 'npm start' ",
     "build": "webpack --mode production",
+    "precommit": "flow && pretty-quick --staged",
     "lint": "eslint src",
     "lint-fix": "eslint src --ext .js,.jsx --fix",
-    "flow": "flow"
+    "flow": "flow",
+    "pull": "git pull && npm prune && npm install"
   },
   "keywords": [],
   "author": "Grekz",
@@ -29,6 +33,7 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "clean-webpack-plugin": "^0.1.19",
+    "concurrently": "^3.6.0",
     "emotion": "^9.2.3",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
@@ -42,10 +47,13 @@
     "flow-bin": "^0.74.0",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
+    "husky": "^0.14.3",
     "i18next": "^11.3.3",
     "jest": "^23.1.0",
     "json-server": "^0.13.0",
+    "lint-staged": "^7.2.0",
     "prettier": "^1.13.5",
+    "pretty-quick": "^1.6.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-emotion": "^9.2.3",
@@ -56,5 +64,7 @@
     "webpack-dev-server": "^3.1.4",
     "webpack-md5-hash": "0.0.6"
   },
-  "dependencies": {}
+  "dependencies": {
+    "opn": "^5.3.0"
+  }
 }
