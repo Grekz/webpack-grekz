@@ -7,6 +7,9 @@ module.exports = {
     browser: true,
     commonjs: true,
     es6: true
+    es6: true,
+    jest: true,
+    'jest/globals': true
   },
   extends: [
     'eslint:recommended',
@@ -14,6 +17,8 @@ module.exports = {
     'prettier',
     'plugin:prettier/recommended',
     'plugin:flowtype/recommended'
+    'plugin:flowtype/recommended',
+    'plugin:jest/recommended'
   ],
   parserOptions: {
     ecmaFeatures: {
@@ -23,11 +28,18 @@ module.exports = {
     sourceType: 'module'
   },
   plugins: ['react', 'prettier', 'flowtype'],
+  plugins: ['react', 'prettier', 'flowtype', 'jest'],
   rules: {
     indent: ['error', 2],
     'linebreak-style': ['error', 'unix'],
     quotes: ['warn', 'single'],
     semi: ['error', 'never'],
     'prettier/prettier': 'error'
+    'prettier/prettier': 'error',
+    'jest/no-disabled-tests': 'warn',
+    'jest/no-focused-tests': 'error',
+    'jest/no-identical-title': 'error',
+    'jest/prefer-to-have-length': 'warn',
+    'jest/valid-expect': 'error'
   }
 }
