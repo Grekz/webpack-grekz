@@ -5,21 +5,40 @@
   "main": "index.js",
   "scripts": {
     "mockServer": "node json-server/server.js",
-    "test": "jest",
+    "test": "flow && jest",
     "test:live": "jest --watch",
     "start": "webpack-dev-server --mode development --hot --open --port 3000 --history-api-fallback",
     "startWithServer": "concurrently 'npm run mockServer' 'npm start' ",
     "build": "webpack --mode production",
-    "precommit": "flow && test && pretty-quick --staged",
+    "precommit": "flow && lint-staged",
     "lint": "eslint src",
     "lint-fix": "eslint src --ext .js,.jsx --fix",
+    "lint-staged": "lint-staged",
     "flow": "flow",
-    "pull": "git pull && npm prune && npm install"
+    "jest": "jest",
+    "jest:full": "jest",
+    "pull": "git pull && npm prune && npm install",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
-  "keywords": [],
+  "lint-staged": {
+    "*.{js,jsx,json,css}": [
+      "prettier --write",
+      "git add",
+      "jest --findRelatedTests --coverage --listTests"
+    ]
+  },
+  "keywords": [
+    "react",
+    "jest"
+  ],
   "author": "Grekz",
   "license": "ISC",
   "devDependencies": {
+    "@storybook/addon-actions": "^4.0.0-alpha.10",
+    "@storybook/addon-links": "^4.0.0-alpha.10",
+    "@storybook/addons": "^4.0.0-alpha.10",
+    "@storybook/react": "^4.0.0-alpha.10",
     "ajv": "^6.5.1",
     "axios": "^0.18.0",
     "babel-cli": "^6.26.0",
@@ -34,6 +53,7 @@
     "babel-preset-flow": "^6.23.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
+    "babel-runtime": "^6.26.0",
     "clean-webpack-plugin": "^0.1.19",
     "concurrently": "^3.6.0",
     "emotion": "^9.2.3",
@@ -57,9 +77,9 @@
     "i18next": "^11.3.3",
     "jest": "^23.1.0",
     "jest-cli": "^23.1.0",
-    "jsdom": "^11.11.0",
     "json-server": "^0.13.0",
     "lint-staged": "^7.2.0",
+    "opn": "^5.3.0",
     "prettier": "^1.13.5",
     "pretty-quick": "^1.6.0",
     "react": "^16.4.1",
@@ -72,7 +92,5 @@
     "webpack-dev-server": "^3.1.4",
     "webpack-md5-hash": "0.0.6"
   },
-  "dependencies": {
-    "opn": "^5.3.0"
-  }
+  "dependencies": {}
 }
