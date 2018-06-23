@@ -1,4 +1,4 @@
-const color = {
+const colors = {
   base: {
     primary: {
       normal: '#2a93d5',
@@ -8,4 +8,4 @@ const color = {
   }
 }
 
-export default color
+export default colors
