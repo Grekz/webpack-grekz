@@ -25,7 +25,7 @@
     "*.{js,jsx,json,css}": [
       "prettier --write",
       "git add",
-      "jest --bail --findRelatedTests --coverage --listTests"
+      "jest --bail --findRelatedTests"
     ]
   },
   "keywords": [
