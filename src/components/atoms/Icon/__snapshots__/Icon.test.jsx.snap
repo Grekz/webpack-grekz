@@ -1,11 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Icon /> rendering mathces the snapshot 1`] = `
-<svg
-  height="22"
-  viewBox="0 0 1024 1024"
-  width="22"
->
-  <path />
-</svg>
+<Icon>
+  <svg
+    height="22"
+    viewBox="0 0 1024 1024"
+    width="22"
+  >
+    <path />
+  </svg>
+</Icon>
 `;
