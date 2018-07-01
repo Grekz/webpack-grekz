@@ -2,6 +2,6 @@
 
 exports[`<Text /> rendering mathces the snapshot 1`] = `
 <Text>
-  <p />
+  <span />
 </Text>
 `;

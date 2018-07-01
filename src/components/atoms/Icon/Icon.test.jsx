@@ -1,5 +1,5 @@
 import React from 'react'
-import Icon from './Icon'
+import Icon from './icon.component'
 import { configure, mount } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 import toJson from 'enzyme-to-json'
