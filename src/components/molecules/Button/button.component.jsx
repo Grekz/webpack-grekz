@@ -9,7 +9,7 @@ const DefaultButton = styled('button')`
   min-height: 40px;
   min-width: 130px;
   padding: 8px 30px;
-  border-radius: 50px;
+  border-radius: ${props => (props.rounded ? '50px' : '0')};
   display: inline-block;
   font-weight: normal;
   text-align: center;

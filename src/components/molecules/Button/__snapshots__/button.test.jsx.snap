@@ -4,7 +4,7 @@ exports[`<Button /> rendering mathces the snapshot 1`] = `
 <Button>
   <Styled(button)>
     <button
-      className="css-dwyr59 e1hsd3xl1"
+      className="css-1kfslch e1hsd3xl1"
     />
   </Styled(button)>
 </Button>
