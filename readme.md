@@ -1,4 +1,4 @@
-# INTL-REACT-APP - Frontend for awesome International Care.com
+# Webpack project to use as template =)
 
 ## Requirements
 
